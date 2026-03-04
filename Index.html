@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Maintenance Work · DubaiFix – 24/7 Emergency Service Dubai</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0a1628;
+    --blue: #1a3a6b;
+    --gold: #e8a020;
+    --gold-light: #f5c050;
+    --white: #f7f8fc;
+    --gray: #8a95a3;
+    --light-bg: #f0f3f8;
+    --card-bg: #ffffff;
+    --text: #1a2332;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 68px;
+    background: rgba(10, 22, 40, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(232, 160, 32, 0.2);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(247,248,252,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 700 !important;
+  }
+  .nav-cta:hover { background: var(--gold-light); color: var(--navy) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 68px;
+  }
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(232,160,32,0.03) 0px, rgba(232,160,32,0.03) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(-45deg, rgba(232,160,32,0.03) 0px, rgba(232,160,32,0.03) 1px, transparent 1px, transparent 60px);
+    pointer-events: none;
+  }
+  .hero-pipe-accent {
+    position: absolute;
+    top: 0; bottom: 0; left: 50%;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+    opacity: 0.15;
+  }
+  .hero-left {
+    padding: 6% 5% 6% 8%;
+    position: relative;
+    z-index: 2;
+    animation: fadeInLeft 0.9s ease both;
+  }
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(232,160,32,0.15);
+    border: 1px solid rgba(232,160,32,0.4);
+    color: var(--gold);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: '★'; font-size: 0.9rem; }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title span { color: var(--gold); display: block; }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: rgba(247,248,252,0.7);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 2rem;
+  }
+  .hero-stats {
+    display: flex; gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .stat-item { display: flex; flex-direction: column; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .hero-phone {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 8px 30px rgba(232,160,32,0.35);
+  }
+  .hero-phone:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .hero-phone svg { width: 22px; height: 22px; }
+
+  /* FORM SIDE */
+  .hero-right {
+    padding: 4% 8% 4% 5%;
+    position: relative;
+    z-index: 2;
+    animation: fadeInRight 0.9s ease 0.2s both;
+  }
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(232,160,32,0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .contact-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+  }
+  .contact-card p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+  .form-group label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select option { background: var(--navy); }
+  .form-group textarea { resize: none; height: 90px; }
+  .form-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 1.1rem;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 6px 25px rgba(232,160,32,0.3);
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .form-note {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
+  }
+  .form-note span { color: var(--gold); }
+
+  /* ── SERVICES ── */
+  #services {
+    padding: 7rem 8%;
+    background: var(--light-bg);
+  }
+  .section-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+  .section-label::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 2px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--navy);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  .section-sub {
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 2rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(26,58,107,0.08);
+    box-shadow: 0 4px 20px rgba(10,22,40,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(10,22,40,0.12); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+  .service-card h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    letter-spacing: 1.5px;
+    margin-bottom: 0.6rem;
+  }
+  .service-card p {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ── WHY US ── */
+  #why-us {
+    padding: 7rem 8%;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  #why-us .hero-bg-pattern { opacity: 0.5; }
+  #why-us .section-title { color: var(--white); }
+  #why-us .section-sub { color: rgba(247,248,252,0.6); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .why-item {
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+    padding: 1.8rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(232,160,32,0.12);
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+  .why-item:hover { background: rgba(232,160,32,0.06); }
+  .why-icon-wrap {
+    flex-shrink: 0;
+    width: 52px; height: 52px;
+    background: rgba(232,160,32,0.15);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+  }
+  .why-item h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+  }
+  .why-item p {
+    font-size: 0.88rem;
+    color: rgba(247,248,252,0.55);
+    line-height: 1.6;
+  }
+  .review-strip {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .review-card {
+    flex: 1;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(232,160,32,0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .review-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 0.7rem; }
+  .review-text {
+    font-size: 0.88rem;
+    color: rgba(247,248,252,0.7);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  .review-author { font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+
+  /* ── GALLERY ── */
+  #gallery {
+    padding: 7rem 8%;
+    background: var(--light-bg);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 1rem;
+  }
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 2; }
+  .gallery-item:nth-child(2) { grid-column: span 2; }
+  .gallery-bg {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    transition: transform 0.4s;
+  }
+  .gallery-item:hover .gallery-bg { transform: scale(1.05); }
+  .g1 { background: linear-gradient(135deg, #1a3a6b, #0d2244); }
+  .g2 { background: linear-gradient(135deg, #0a2a50, #1a4080); }
+  .g3 { background: linear-gradient(135deg, #132d5a, #0f2440); }
+  .g4 { background: linear-gradient(135deg, #0d2040, #1a3060); }
+  .g5 { background: linear-gradient(135deg, #162e58, #0b1e38); }
+  .gallery-emoji { font-size: 3rem; opacity: 0.6; }
+  .gallery-item:first-child .gallery-emoji { font-size: 5rem; }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(10,22,40,0.85) 0%, transparent 60%);
+    display: flex; align-items: flex-end;
+    padding: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-tag {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    color: var(--navy);
+  }
+  .gallery-notice {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .gallery-notice a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* ── FAQ ── */
+  #faq {
+    padding: 7rem 8%;
+    background: var(--white);
+  }
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .faq-side-content { position: sticky; top: 100px; }
+  .faq-side-content .section-title { margin-bottom: 1rem; }
+  .faq-contact-prompt {
+    margin-top: 2.5rem;
+    padding: 1.8rem;
+    background: var(--navy);
+    border-radius: 14px;
+    border-left: 4px solid var(--gold);
+  }
+  .faq-contact-prompt p {
+    color: rgba(247,248,252,0.75);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .faq-contact-prompt a {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .faq-list { display: flex; flex-direction: column; gap: 0.8rem; }
+  .faq-item {
+    border: 1px solid rgba(26,58,107,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--card-bg);
+    transition: box-shadow 0.2s;
+  }
+  .faq-item:hover { box-shadow: 0 4px 20px rgba(10,22,40,0.08); }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    gap: 1rem;
+  }
+  .faq-question .faq-arrow {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: rgba(232,160,32,0.12);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold);
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 1.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 1.5rem 1.2rem;
+  }
+
+  /* ── FINAL CTA ── */
+  #cta {
+    padding: 7rem 8%;
+    background: linear-gradient(135deg, var(--navy) 0%, #0f2244 50%, #1a3a6b 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta .hero-bg-pattern { opacity: 0.6; }
+  .cta-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,160,32,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-inner { position: relative; z-index: 1; }
+  .cta-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(232,160,32,0.12);
+    border: 1px solid rgba(232,160,32,0.35);
+    color: var(--gold);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  #cta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    color: var(--white);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+  }
+  #cta h2 span { color: var(--gold); }
+  #cta p {
+    color: rgba(247,248,252,0.65);
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 550px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+  .cta-buttons {
+    display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 1.1rem 2.5rem;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 8px 30px rgba(232,160,32,0.4);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: transparent;
+    color: var(--white);
+    padding: 1.1rem 2.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); background: rgba(232,160,32,0.08); }
+  .cta-trust {
+    margin-top: 3rem;
+    display: flex; justify-content: center; align-items: center; gap: 2.5rem;
+    color: rgba(247,248,252,0.5);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 0.4rem; }
+  .trust-item span { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060e1b;
+    padding: 3rem 8% 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+  .footer-brand span { color: var(--gold); }
+  footer p {
+    color: rgba(247,248,252,0.35);
+    font-size: 0.8rem;
+  }
+  footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: var(--gold);
+    overflow: hidden;
+    padding: 0.7rem 0;
+    position: relative;
+  }
+  .ticker-track {
+    display: flex;
+    animation: ticker 25s linear infinite;
+    white-space: nowrap;
+    gap: 3rem;
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .ticker-item {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    color: var(--navy);
+    letter-spacing: 2px;
+    display: flex; align-items: center; gap: 1rem;
+    flex-shrink: 0;
+  }
+  .ticker-dot { width: 5px; height: 5px; background: var(--navy); border-radius: 50%; opacity: 0.5; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    /* Hero: single column, no overflow */
+    #hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding: 80px 0 2rem;
+    }
+    .hero-pipe-accent { display: none; }
+    .hero-left { padding: 2.5rem 5%; }
+    .hero-right { padding: 0 5% 2.5rem; }
+    .hero-title { font-size: clamp(2.8rem, 12vw, 4rem); }
+    .hero-stats { gap: 1.5rem; }
+
+    /* Form: single column */
+    .form-row { grid-template-columns: 1fr; }
+    .contact-card { padding: 1.8rem 1.4rem; }
+
+    /* Nav */
+    nav .nav-links { display: none; }
+    nav { padding: 0 4%; }
+
+    /* Services */
+    #services { padding: 4rem 5%; }
+    .services-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Why Us */
+    #why-us { padding: 4rem 5%; }
+    .why-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .review-strip { flex-direction: column; }
+
+    /* Gallery */
+    #gallery { padding: 4rem 5%; }
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .gallery-item { height: 140px; }
+    .gallery-item:first-child { grid-column: span 2; grid-row: span 1; height: 180px; }
+    .gallery-item:nth-child(2) { grid-column: span 2; }
+
+    /* FAQ */
+    #faq { padding: 4rem 5%; }
+    .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .faq-side-content { position: static; }
+
+    /* CTA */
+    #cta { padding: 4rem 5%; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    .cta-trust { gap: 1rem; flex-direction: column; align-items: center; }
+
+    /* Footer */
+    footer { flex-direction: column; text-align: center; padding: 2rem 5%; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: clamp(2.4rem, 11vw, 3rem); }
+    .services-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.2rem; }
+    .stat-num { font-size: 1.8rem; }
+    .why-item { padding: 1.2rem; }
+    .ticker-track { animation-duration: 18s; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Plumbing Maintenance Work <span>· DubaiFix</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="tel:+971563889560" class="nav-cta">Call Now</a></li>
+  </ul>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker" style="margin-top:68px;">
+  <div class="ticker-track" id="tickerTrack">
+    <div class="ticker-item">🔧 24/7 Emergency Service <span class="ticker-dot"></span></div>
+    <div class="ticker-item">⚡ Same-Day Response <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🏠 All Dubai Areas <span class="ticker-dot"></span></div>
+    <div class="ticker-item">⭐ 4.6 / 5 Stars — 48 Reviews <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🔧 Plumbing · Electric · A/C · Tiling <span class="ticker-dot"></span></div>
+    <div class="ticker-item">📞 +971 56 388 9560 <span class="ticker-dot"></span></div>
+    <div class="ticker-item">💧 Water Proofing Specialists <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🚿 Shower & Bathtub Glass Installation <span class="ticker-dot"></span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item">🔧 24/7 Emergency Service <span class="ticker-dot"></span></div>
+    <div class="ticker-item">⚡ Same-Day Response <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🏠 All Dubai Areas <span class="ticker-dot"></span></div>
+    <div class="ticker-item">⭐ 4.6 / 5 Stars — 48 Reviews <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🔧 Plumbing · Electric · A/C · Tiling <span class="ticker-dot"></span></div>
+    <div class="ticker-item">📞 +971 56 388 9560 <span class="ticker-dot"></span></div>
+    <div class="ticker-item">💧 Water Proofing Specialists <span class="ticker-dot"></span></div>
+    <div class="ticker-item">🚿 Shower & Bathtub Glass Installation <span class="ticker-dot"></span></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-pipe-accent"></div>
+  <div class="hero-left">
+    <div class="hero-badge">Dubai's Trusted Maintenance Team</div>
+    <h1 class="hero-title">
+      Fast Fixes.<br>
+      <span>Zero Stress.</span>
+      Dubai.
+    </h1>
+    <p class="hero-sub">
+      From burst pipes to full installations — we handle plumbing, electrical, A/C, tiling, painting, waterproofing, and glass work. All under one call.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">4.6★</span>
+        <span class="stat-label">48 Reviews</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Open Always</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">8+</span>
+        <span class="stat-label">Services</span>
+      </div>
+    </div>
+    <a href="tel:+971563889560" class="hero-phone">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      +971 56 388 9560
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="contact-card">
+      <h3>Get a Free Quote</h3>
+      <p>We respond within minutes — day or night.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Ahmed">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Al Rashid">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" placeholder="+971 XX XXX XXXX">
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Plumbing Repair</option>
+          <option>Plumbing Installation</option>
+          <option>Electrical Work</option>
+          <option>A/C Service</option>
+          <option>Tiling / Mason</option>
+          <option>Painting</option>
+          <option>Waterproofing</option>
+          <option>Shower / Bathtub Glass</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Describe Your Issue</label>
+        <textarea placeholder="Tell us what's happening..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(this)">Get My Free Quote →</button>
+      <p class="form-note">🔒 No spam. We'll call you in <span>under 10 minutes.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Complete Home<br>Maintenance Solutions</h2>
+  <p class="section-sub">All kinds of maintenance and new installations across Dubai and nearby areas — one team, every job.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🔧</span>
+      <h4>Plumbing Repair</h4>
+      <p>Burst pipes, leaks, blockages, water heaters, and drainage issues — fixed fast and right the first time.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚿</span>
+      <h4>New Installations</h4>
+      <p>Full bathroom and kitchen plumbing installations. Sinks, toilets, showers, and more fitted professionally.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⚡</span>
+      <h4>Electrical Work</h4>
+      <p>Wiring, switches, sockets, circuit breakers, and full electrical system installations done safely.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">❄️</span>
+      <h4>A/C Services</h4>
+      <p>Air conditioning installation, maintenance, cleaning, and repair for all major brands.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🪨</span>
+      <h4>Tile & Mason</h4>
+      <p>Floor and wall tiling, grouting, and masonry work for kitchens, bathrooms, and outdoor spaces.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🖌️</span>
+      <h4>Painting</h4>
+      <p>Interior and exterior painting with premium finishes. Walls, ceilings, and feature walls.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💧</span>
+      <h4>Waterproofing</h4>
+      <p>Professional waterproofing for roofs, bathrooms, and foundations to prevent costly water damage.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🪟</span>
+      <h4>Shower & Bath Glass</h4>
+      <p>Custom shower enclosures, frameless glass panels, and bathtub glass screens installed beautifully.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="hero-bg-pattern"></div>
+  <div class="section-label">Why Choose Us</div>
+  <h2 class="section-title">The Dubai Standard<br>For Home Maintenance</h2>
+  <p class="section-sub">We've built our reputation one job at a time — fast, reliable, and always professional.</p>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon-wrap">🕐</div>
+      <div>
+        <h4>Open 24 Hours, Every Day</h4>
+        <p>Emergencies don't wait for business hours. Neither do we. Call any time and we'll be there.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon-wrap">🏆</div>
+      <div>
+        <h4>4.6 Stars — Verified Reviews</h4>
+        <p>48 real reviews from Dubai residents who trust us to keep their homes running perfectly.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon-wrap">🔩</div>
+      <div>
+        <h4>All-In-One Service Team</h4>
+        <p>One call gets you plumbing, electrical, A/C, tiling, and more. No juggling multiple contractors.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon-wrap">📍</div>
+      <div>
+        <h4>Serving All Dubai Areas</h4>
+        <p>Based in Deira, we cover all of Dubai and nearby areas — wherever you need us, we come to you.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon-wrap">💬</div>
+      <div>
+        <h4>Transparent Pricing</h4>
+        <p>Free quotes, no surprises. We explain the work and the cost clearly before we start anything.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon-wrap">✅</div>
+      <div>
+        <h4>Quality Guaranteed</h4>
+        <p>Every job is done to a high standard. We don't leave until you're satisfied with the result.</p>
+      </div>
+    </div>
+  </div>
+  <div class="review-strip">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Excellent service! They came within the hour and fixed our burst pipe. Very professional and clean work."</p>
+      <div class="review-author">— Mohammed R., Deira</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Called them at midnight for an A/C breakdown. They showed up fast, repaired it on the spot. Highly recommend!"</p>
+      <div class="review-author">— Sarah K., Jumeirah</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Great tiling job in our bathroom. Very fair price, neat work. Will definitely call again for other maintenance."</p>
+      <div class="review-author">— Vikram P., Business Bay</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Seen It. Fixed It.<br>Perfected It.</h2>
+  <p class="section-sub">Browse a sample of our completed jobs across Dubai — from emergency repairs to full installations.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <div class="gallery-bg g1">
+        <span class="gallery-emoji">🚿</span>
+      </div>
+      <div class="gallery-overlay"><span class="gallery-tag">Bathroom Renovation</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-bg g2">
+        <span class="gallery-emoji">⚡</span>
+      </div>
+      <div class="gallery-overlay"><span class="gallery-tag">Electrical Installation</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-bg g3">
+        <span class="gallery-emoji">🪨</span>
+      </div>
+      <div class="gallery-overlay"><span class="gallery-tag">Tile Work</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-bg g4">
+        <span class="gallery-emoji">❄️</span>
+      </div>
+      <div class="gallery-overlay"><span class="gallery-tag">A/C Service</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-bg g5">
+        <span class="gallery-emoji">🪟</span>
+      </div>
+      <div class="gallery-overlay"><span class="gallery-tag">Glass Installation</span></div>
+    </div>
+  </div>
+  <p class="gallery-notice">
+    48+ real project photos available on our <a href="https://maps.google.com" target="_blank">Google Business Profile →</a>
+  </p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-layout">
+    <div class="faq-side-content">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Questions<br>Answered</h2>
+      <p class="section-sub">Everything you need to know before calling us — though most people just call.</p>
+      <div class="faq-contact-prompt">
+        <p>Still have a question? We're available right now — call or WhatsApp us directly.</p>
+        <a href="tel:+971563889560">📞 +971 56 388 9560</a>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are you really available 24 hours a day?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">Yes, absolutely. We operate 24 hours a day, 7 days a week including weekends and public holidays. Plumbing and maintenance emergencies can happen at any time — we're always ready to respond.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Which areas of Dubai do you serve?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">We're based in Hor Al Anz, Deira and serve all of Dubai and nearby areas. Whether you're in Jumeirah, Business Bay, Dubai Marina, Al Quoz, or any other district — we come to you.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How quickly can you arrive for an emergency?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">For emergency calls, we aim to arrive as quickly as possible. Response time depends on your location and current demand, but we treat every emergency as a priority and will give you an honest ETA when you call.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you provide free quotes before starting work?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">Yes. We assess the job and provide a clear quote before any work begins. There are no hidden fees — the price we quote is the price you pay. We believe in complete transparency with our customers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can you handle both repairs AND new installations?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">Absolutely. We handle all kinds of maintenance work as well as brand new installations — plumbing, electrical, A/C, tiling, painting, waterproofing, and shower/bathtub glass. One team for everything.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you work on apartments and villas?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">Yes, we work across all types of residential and commercial properties — apartments, villas, townhouses, and commercial spaces. No job is too big or too small.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I get in touch or book a service?
+          <span class="faq-arrow">+</span>
+        </button>
+        <div class="faq-answer">The fastest way is to call or WhatsApp us at +971 56 388 9560. You can also fill out the quote form at the top of this page and we'll contact you within minutes. We're available around the clock.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="hero-bg-pattern"></div>
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="cta-badge">🔧 Ready When You Are</div>
+    <h2>Got a Problem?<br><span>We've Got Your Fix.</span></h2>
+    <p>Don't let a plumbing or maintenance issue ruin your day. Call Dubai's trusted team — we respond fast, work clean, and guarantee quality.</p>
+    <div class="cta-buttons">
+      <a href="tel:+971563889560" class="btn-primary">
+        📞 Call Now — 24/7
+      </a>
+      <a href="https://wa.me/971563889560" class="btn-secondary" target="_blank">
+        💬 WhatsApp Us
+      </a>
+    </div>
+    <div class="cta-trust">
+      <div class="trust-item"><span>★★★★★</span> 4.6 / 5 Stars</div>
+      <div class="trust-item"><span>✓</span> 48 Verified Reviews</div>
+      <div class="trust-item"><span>⏰</span> Open 24/7</div>
+      <div class="trust-item"><span>📍</span> All Dubai Areas</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Plumbing Maintenance Work <span>· DubaiFix</span></div>
+  <p>Talal Department Store, Hor Al Anz, Deira, Dubai, UAE<br>
+    <a href="tel:+971563889560">+971 56 388 9560</a>
+  </p>
+  <p style="color:rgba(247,248,252,0.25); font-size:0.75rem;">© 2024 Plumbing Maintenance Work · DubaiFix. All rights reserved.</p>
+</footer>
+
+<!-- ADMIN TRIGGER (hidden link in footer) -->
+<div style="text-align:center; padding: 0.5rem; background:#060e1b;">
+  <a href="#" onclick="openAdminLogin(event)" style="color:rgba(255,255,255,0.1); font-size:0.65rem; text-decoration:none; letter-spacing:2px;">ADMIN</a>
+</div>
+
+<!-- ADMIN LOGIN OVERLAY -->
+<div id="adminLoginOverlay" style="display:none; position:fixed; inset:0; background:rgba(6,14,27,0.97); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.3); border-radius:16px; padding:2.5rem; width:min(380px,90vw); box-shadow:0 30px 80px rgba(0,0,0,0.6);">
+    <div style="text-align:center; margin-bottom:1.8rem;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:#f7f8fc; letter-spacing:2px;">Plumbing Maintenance Work <span style="color:#e8a020;">· DubaiFix</span></div>
+      <p style="color:#8a95a3; font-size:0.85rem; margin-top:0.3rem;">Admin Access</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div>
+        <label style="font-size:0.72rem; color:#8a95a3; text-transform:uppercase; letter-spacing:1px; font-weight:600; display:block; margin-bottom:0.4rem;">Username</label>
+        <input id="adminUser" type="text" placeholder="admin" style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.8rem 1rem; color:#f7f8fc; font-family:'Barlow',sans-serif; font-size:0.95rem; outline:none;">
+      </div>
+      <div>
+        <label style="font-size:0.72rem; color:#8a95a3; text-transform:uppercase; letter-spacing:1px; font-weight:600; display:block; margin-bottom:0.4rem;">Password</label>
+        <input id="adminPass" type="password" placeholder="••••••••" style="width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.8rem 1rem; color:#f7f8fc; font-family:'Barlow',sans-serif; font-size:0.95rem; outline:none;" onkeydown="if(event.key==='Enter')doAdminLogin()">
+      </div>
+      <div id="adminError" style="color:#e74c3c; font-size:0.82rem; text-align:center; display:none;">Incorrect credentials. Try again.</div>
+      <button onclick="doAdminLogin()" style="background:#e8a020; color:#0a1628; border:none; padding:1rem; border-radius:8px; font-family:'Barlow',sans-serif; font-size:0.95rem; font-weight:700; cursor:pointer; letter-spacing:1px; margin-top:0.3rem;">LOGIN →</button>
+      <button onclick="closeAdminLogin()" style="background:transparent; color:#8a95a3; border:1px solid rgba(255,255,255,0.1); padding:0.8rem; border-radius:8px; font-family:'Barlow',sans-serif; font-size:0.85rem; cursor:pointer;">Cancel</button>
+    </div>
+    <p style="color:rgba(138,149,163,0.5); font-size:0.7rem; text-align:center; margin-top:1rem;">Default: admin / dubai2024</p>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD PANEL -->
+<div id="adminPanel" style="display:none; position:fixed; inset:0; background:#0d1b2e; z-index:9998; overflow-y:auto; font-family:'Barlow',sans-serif;">
+  
+  <!-- Admin Nav -->
+  <div style="background:#060e1b; border-bottom:1px solid rgba(232,160,32,0.2); padding:0 2rem; height:60px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:10;">
+    <div style="display:flex; align-items:center; gap:2rem;">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.4rem; color:#f7f8fc; letter-spacing:2px;">Plumbing Maintenance Work <span style="color:#e8a020;">· DubaiFix</span> <span style="color:#8a95a3; font-size:1rem;">Admin</span></div>
+      <div style="display:flex; gap:0.5rem;" id="adminTabs">
+        <button onclick="showTab('analytics')" class="atab active" data-tab="analytics">📊 Analytics</button>
+        <button onclick="showTab('submissions')" class="atab" data-tab="submissions">📋 Submissions</button>
+        <button onclick="showTab('services')" class="atab" data-tab="services">🔧 Services</button>
+        <button onclick="showTab('reviews')" class="atab" data-tab="reviews">⭐ Reviews</button>
+      </div>
+    </div>
+    <button onclick="closeAdmin()" style="background:rgba(231,76,60,0.15); color:#e74c3c; border:1px solid rgba(231,76,60,0.3); padding:0.4rem 1rem; border-radius:6px; cursor:pointer; font-size:0.85rem; font-weight:600;">Logout</button>
+  </div>
+
+  <div style="padding:2rem; max-width:1200px; margin:0 auto;">
+
+    <!-- ANALYTICS TAB -->
+    <div id="tab-analytics" class="admin-tab-content">
+      <h2 style="font-family:'Bebas Neue',sans-serif; color:#f7f8fc; font-size:2rem; letter-spacing:2px; margin-bottom:1.5rem;">Contact & Call Analytics</h2>
+      
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.2rem; margin-bottom:2rem;">
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.2); border-radius:12px; padding:1.5rem;">
+          <div style="color:#8a95a3; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">Total Form Submissions</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#e8a020;" id="statTotal">0</div>
+        </div>
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.2); border-radius:12px; padding:1.5rem;">
+          <div style="color:#8a95a3; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">This Week</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#2ecc71;" id="statWeek">0</div>
+        </div>
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.2); border-radius:12px; padding:1.5rem;">
+          <div style="color:#8a95a3; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">Call Button Clicks</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#3498db;" id="statCalls">0</div>
+        </div>
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.2); border-radius:12px; padding:1.5rem;">
+          <div style="color:#8a95a3; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem;">WhatsApp Clicks</div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#25d366;" id="statWA">0</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.15); border-radius:12px; padding:1.5rem;">
+          <h3 style="color:#f7f8fc; font-size:1rem; font-weight:600; margin-bottom:1.2rem;">Top Requested Services</h3>
+          <div id="serviceChart"></div>
+        </div>
+        <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.15); border-radius:12px; padding:1.5rem;">
+          <h3 style="color:#f7f8fc; font-size:1rem; font-weight:600; margin-bottom:1.2rem;">Recent Activity Log</h3>
+          <div id="activityLog" style="display:flex; flex-direction:column; gap:0.6rem; max-height:280px; overflow-y:auto;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMISSIONS TAB -->
+    <div id="tab-submissions" class="admin-tab-content" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <h2 style="font-family:'Bebas Neue',sans-serif; color:#f7f8fc; font-size:2rem; letter-spacing:2px;">Quote Form Submissions</h2>
+        <div style="display:flex; gap:0.8rem;">
+          <select id="filterService" onchange="renderSubmissions()" style="background:#0f1e35; border:1px solid rgba(255,255,255,0.15); color:#f7f8fc; padding:0.5rem 1rem; border-radius:6px; font-family:'Barlow',sans-serif; font-size:0.85rem;">
+            <option value="">All Services</option>
+            <option>Plumbing Repair</option>
+            <option>Electrical Work</option>
+            <option>A/C Services</option>
+            <option>Tiling / Mason</option>
+            <option>Painting</option>
+            <option>Waterproofing</option>
+            <option>Shower / Bathtub Glass</option>
+          </select>
+          <button onclick="clearSubmissions()" style="background:rgba(231,76,60,0.15); color:#e74c3c; border:1px solid rgba(231,76,60,0.3); padding:0.5rem 1rem; border-radius:6px; cursor:pointer; font-size:0.85rem;">Clear All</button>
+        </div>
+      </div>
+      <div id="submissionsTable"></div>
+    </div>
+
+    <!-- SERVICES TAB -->
+    <div id="tab-services" class="admin-tab-content" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <h2 style="font-family:'Bebas Neue',sans-serif; color:#f7f8fc; font-size:2rem; letter-spacing:2px;">Edit Services</h2>
+        <button onclick="addService()" style="background:#e8a020; color:#0a1628; border:none; padding:0.6rem 1.4rem; border-radius:6px; cursor:pointer; font-weight:700; font-size:0.9rem;">+ Add Service</button>
+      </div>
+      <div id="servicesEditor" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem;"></div>
+    </div>
+
+    <!-- REVIEWS TAB -->
+    <div id="tab-reviews" class="admin-tab-content" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <h2 style="font-family:'Bebas Neue',sans-serif; color:#f7f8fc; font-size:2rem; letter-spacing:2px;">Manage Reviews</h2>
+        <button onclick="addReview()" style="background:#e8a020; color:#0a1628; border:none; padding:0.6rem 1.4rem; border-radius:6px; cursor:pointer; font-weight:700; font-size:0.9rem;">+ Add Review</button>
+      </div>
+      <div id="reviewsEditor" style="display:flex; flex-direction:column; gap:1rem;"></div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .atab {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #8a95a3;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .atab.active, .atab:hover {
+    background: rgba(232,160,32,0.15);
+    border-color: rgba(232,160,32,0.4);
+    color: #e8a020;
+  }
+  .sub-row {
+    background: #0f1e35;
+    border: 1px solid rgba(232,160,32,0.1);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  .sub-label { color: #8a95a3; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.2rem; }
+  .sub-val { color: #f7f8fc; font-size: 0.9rem; font-weight: 500; }
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+  .badge-new { background: rgba(46,204,113,0.2); color: #2ecc71; border: 1px solid rgba(46,204,113,0.3); }
+  .badge-read { background: rgba(138,149,163,0.15); color: #8a95a3; border: 1px solid rgba(138,149,163,0.2); }
+  .svc-edit-card {
+    background: #0f1e35;
+    border: 1px solid rgba(232,160,32,0.15);
+    border-radius: 12px;
+    padding: 1.4rem;
+  }
+  .admin-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    color: #f7f8fc;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.88rem;
+    margin-bottom: 0.6rem;
+    outline: none;
+  }
+  .admin-input:focus { border-color: #e8a020; }
+  .admin-textarea { min-height: 70px; resize: vertical; }
+  .bar-wrap { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem; }
+  .bar-label { color: #8a95a3; font-size: 0.8rem; width: 140px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 8px; background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; background: #e8a020; border-radius: 4px; }
+  .bar-count { color: #e8a020; font-size: 0.8rem; font-weight: 700; width: 24px; text-align: right; }
+  @media(max-width:700px) {
+    .sub-row { grid-template-columns: 1fr 1fr; }
+    #adminTabs { display: none; }
+  }
+</style>
+
+<script>
+  // ── FAQ ──
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── SCROLL REVEAL ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card,.why-item,.review-card,.gallery-item,.faq-item').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(24px)';
+    el.style.transition='opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  // ── ANALYTICS TRACKING ──
+  let analytics = JSON.parse(localStorage.getItem('df_analytics') || '{"calls":0,"whatsapp":0,"submissions":0,"week":0}');
+  document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => { analytics.calls++; saveAnalytics(); }));
+  document.querySelectorAll('a[href^="https://wa.me"]').forEach(el => el.addEventListener('click', () => { analytics.whatsapp++; saveAnalytics(); }));
+  function saveAnalytics() { localStorage.setItem('df_analytics', JSON.stringify(analytics)); }
+
+  // ── FORM SUBMIT ──
+  function handleSubmit(btn) {
+    const card = btn.closest('.contact-card');
+    const fname = card.querySelector('input[type="text"]')?.value || '';
+    const phone = card.querySelector('input[type="tel"]')?.value || '';
+    const service = card.querySelector('select')?.value || '';
+    const desc = card.querySelector('textarea')?.value || '';
+    if (!phone) { alert('Please enter your phone number.'); return; }
+    const submissions = JSON.parse(localStorage.getItem('df_submissions') || '[]');
+    submissions.unshift({ id: Date.now(), name: fname || 'Anonymous', phone, service: service || 'Not specified', desc, date: new Date().toLocaleString('en-GB'), status: 'new' });
+    localStorage.setItem('df_submissions', JSON.stringify(submissions));
+    analytics.submissions++; analytics.week++;
+    saveAnalytics();
+    logActivity(`New quote request from ${fname || 'Anonymous'} — ${service || 'General'}`);
+    btn.textContent = '✓ Request Sent! We\'ll call you shortly.';
+    btn.style.background = '#2ecc71'; btn.style.color = '#fff'; btn.disabled = true;
+  }
+
+  function logActivity(msg) {
+    const log = JSON.parse(localStorage.getItem('df_log') || '[]');
+    log.unshift({ msg, time: new Date().toLocaleTimeString() });
+    if (log.length > 50) log.pop();
+    localStorage.setItem('df_log', JSON.stringify(log));
+  }
+
+  // ── ADMIN AUTH ──
+  const ADMIN_USER = 'admin', ADMIN_PASS = 'dubai2024';
+  function openAdminLogin(e) { e.preventDefault(); document.getElementById('adminLoginOverlay').style.display='flex'; }
+  function closeAdminLogin() { document.getElementById('adminLoginOverlay').style.display='none'; }
+  function doAdminLogin() {
+    const u = document.getElementById('adminUser').value;
+    const p = document.getElementById('adminPass').value;
+    if (u === ADMIN_USER && p === ADMIN_PASS) {
+      closeAdminLogin();
+      openAdmin();
+    } else {
+      document.getElementById('adminError').style.display='block';
+    }
+  }
+  function openAdmin() {
+    document.getElementById('adminPanel').style.display='block';
+    document.body.style.overflow='hidden';
+    showTab('analytics');
+  }
+  function closeAdmin() {
+    document.getElementById('adminPanel').style.display='none';
+    document.body.style.overflow='';
+  }
+
+  // ── TABS ──
+  function showTab(name) {
+    document.querySelectorAll('.admin-tab-content').forEach(t => t.style.display='none');
+    document.querySelectorAll('.atab').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-'+name).style.display='block';
+    document.querySelector(`.atab[data-tab="${name}"]`)?.classList.add('active');
+    if (name==='analytics') renderAnalytics();
+    if (name==='submissions') renderSubmissions();
+    if (name==='services') renderServicesEditor();
+    if (name==='reviews') renderReviewsEditor();
+  }
+
+  // ── ANALYTICS RENDER ──
+  function renderAnalytics() {
+    const a = JSON.parse(localStorage.getItem('df_analytics') || '{}');
+    const subs = JSON.parse(localStorage.getItem('df_submissions') || '[]');
+    document.getElementById('statTotal').textContent = subs.length;
+    document.getElementById('statWeek').textContent = a.week || 0;
+    document.getElementById('statCalls').textContent = a.calls || 0;
+    document.getElementById('statWA').textContent = a.whatsapp || 0;
+
+    // Service breakdown
+    const counts = {};
+    subs.forEach(s => { counts[s.service] = (counts[s.service]||0)+1; });
+    const sorted = Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+    const max = sorted[0]?.[1] || 1;
+    const chartEl = document.getElementById('serviceChart');
+    if (sorted.length === 0) {
+      chartEl.innerHTML = '<p style="color:#8a95a3; font-size:0.85rem; font-style:italic;">No submissions yet.</p>';
+    } else {
+      chartEl.innerHTML = sorted.map(([label, count]) => `
+        <div class="bar-wrap">
+          <div class="bar-label">${label.length>18?label.slice(0,18)+'…':label}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.round(count/max*100)}%"></div></div>
+          <div class="bar-count">${count}</div>
+        </div>`).join('');
+    }
+
+    // Activity log
+    const log = JSON.parse(localStorage.getItem('df_log') || '[]');
+    const logEl = document.getElementById('activityLog');
+    if (log.length === 0) {
+      logEl.innerHTML = '<p style="color:#8a95a3; font-size:0.85rem; font-style:italic;">No activity yet.</p>';
+    } else {
+      logEl.innerHTML = log.map(l => `
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0.8rem; background:rgba(255,255,255,0.03); border-radius:6px;">
+          <span style="color:#f7f8fc; font-size:0.82rem;">${l.msg}</span>
+          <span style="color:#8a95a3; font-size:0.72rem; flex-shrink:0; margin-left:0.5rem;">${l.time}</span>
+        </div>`).join('');
+    }
+  }
+
+  // ── SUBMISSIONS RENDER ──
+  function renderSubmissions() {
+    const filter = document.getElementById('filterService')?.value || '';
+    let subs = JSON.parse(localStorage.getItem('df_submissions') || '[]');
+    if (filter) subs = subs.filter(s => s.service === filter);
+    const el = document.getElementById('submissionsTable');
+    if (subs.length === 0) {
+      el.innerHTML = '<div style="text-align:center; color:#8a95a3; padding:3rem; font-style:italic;">No submissions yet. They will appear here when customers fill out the quote form.</div>';
+      return;
+    }
+    el.innerHTML = subs.map((s,i) => `
+      <div class="sub-row">
+        <div><div class="sub-label">Name</div><div class="sub-val">${s.name}</div></div>
+        <div><div class="sub-label">Phone</div><div class="sub-val"><a href="tel:${s.phone}" style="color:#e8a020; text-decoration:none;">${s.phone}</a></div></div>
+        <div><div class="sub-label">Service</div><div class="sub-val">${s.service}</div></div>
+        <div><div class="sub-label">Date</div><div class="sub-val" style="font-size:0.8rem;">${s.date}</div></div>
+        <div style="display:flex; flex-direction:column; gap:0.4rem; align-items:flex-end;">
+          <span class="badge ${s.status==='new'?'badge-new':'badge-read'}">${s.status==='new'?'🔔 New':'✓ Read'}</span>
+          <button onclick="markRead(${i})" style="background:transparent; border:1px solid rgba(255,255,255,0.1); color:#8a95a3; padding:0.2rem 0.6rem; border-radius:4px; cursor:pointer; font-size:0.72rem;">Mark Read</button>
+          <button onclick="deleteSubmission(${i})" style="background:transparent; border:1px solid rgba(231,76,60,0.3); color:#e74c3c; padding:0.2rem 0.6rem; border-radius:4px; cursor:pointer; font-size:0.72rem;">Delete</button>
+        </div>
+      </div>
+      ${s.desc ? `<div style="background:#0f1e35; border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:0.8rem 1.2rem; margin-bottom:0.8rem; color:#8a95a3; font-size:0.85rem; font-style:italic;">"${s.desc}"</div>` : ''}
+    `).join('');
+  }
+
+  function markRead(idx) {
+    const subs = JSON.parse(localStorage.getItem('df_submissions') || '[]');
+    if (subs[idx]) { subs[idx].status = 'read'; localStorage.setItem('df_submissions', JSON.stringify(subs)); renderSubmissions(); }
+  }
+  function deleteSubmission(idx) {
+    if (!confirm('Delete this submission?')) return;
+    const subs = JSON.parse(localStorage.getItem('df_submissions') || '[]');
+    subs.splice(idx, 1);
+    localStorage.setItem('df_submissions', JSON.stringify(subs));
+    renderSubmissions();
+  }
+  function clearSubmissions() {
+    if (!confirm('Clear ALL submissions? This cannot be undone.')) return;
+    localStorage.removeItem('df_submissions');
+    renderSubmissions();
+  }
+
+  // ── SERVICES EDITOR ──
+  const defaultServices = [
+    { icon:'🔧', title:'Plumbing Repair', desc:'Burst pipes, leaks, blockages, water heaters, and drainage issues — fixed fast and right the first time.' },
+    { icon:'🚿', title:'New Installations', desc:'Full bathroom and kitchen plumbing installations. Sinks, toilets, showers, and more fitted professionally.' },
+    { icon:'⚡', title:'Electrical Work', desc:'Wiring, switches, sockets, circuit breakers, and full electrical system installations done safely.' },
+    { icon:'❄️', title:'A/C Services', desc:'Air conditioning installation, maintenance, cleaning, and repair for all major brands.' },
+    { icon:'🪨', title:'Tile & Mason', desc:'Floor and wall tiling, grouting, and masonry work for kitchens, bathrooms, and outdoor spaces.' },
+    { icon:'🖌️', title:'Painting', desc:'Interior and exterior painting with premium finishes. Walls, ceilings, and feature walls.' },
+    { icon:'💧', title:'Waterproofing', desc:'Professional waterproofing for roofs, bathrooms, and foundations to prevent costly water damage.' },
+    { icon:'🪟', title:'Shower & Bath Glass', desc:'Custom shower enclosures, frameless glass panels, and bathtub glass screens installed beautifully.' }
+  ];
+
+  function getServices() {
+    return JSON.parse(localStorage.getItem('df_services') || JSON.stringify(defaultServices));
+  }
+  function saveServices(svcs) {
+    localStorage.setItem('df_services', JSON.stringify(svcs));
+  }
+
+  function renderServicesEditor() {
+    const svcs = getServices();
+    document.getElementById('servicesEditor').innerHTML = svcs.map((s,i) => `
+      <div class="svc-edit-card">
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.8rem;">
+          <input class="admin-input" style="width:60px; text-align:center; font-size:1.2rem; margin:0;" value="${s.icon}" oninput="updateService(${i},'icon',this.value)">
+          <input class="admin-input" style="flex:1; margin:0; font-weight:600;" value="${s.title}" oninput="updateService(${i},'title',this.value)">
+        </div>
+        <textarea class="admin-input admin-textarea" oninput="updateService(${i},'desc',this.value)">${s.desc}</textarea>
+        <button onclick="deleteService(${i})" style="background:rgba(231,76,60,0.12); color:#e74c3c; border:1px solid rgba(231,76,60,0.25); padding:0.4rem 0.8rem; border-radius:5px; cursor:pointer; font-size:0.78rem; width:100%;">Remove Service</button>
+      </div>`).join('');
+  }
+
+  function updateService(idx, field, val) {
+    const svcs = getServices();
+    svcs[idx][field] = val;
+    saveServices(svcs);
+  }
+  function deleteService(idx) {
+    if (!confirm('Remove this service?')) return;
+    const svcs = getServices();
+    svcs.splice(idx,1);
+    saveServices(svcs);
+    renderServicesEditor();
+  }
+  function addService() {
+    const svcs = getServices();
+    svcs.push({ icon:'🔩', title:'New Service', desc:'Describe this service here.' });
+    saveServices(svcs);
+    renderServicesEditor();
+  }
+
+  // ── REVIEWS EDITOR ──
+  const defaultReviews = [
+    { stars:5, text:'Excellent service! They came within the hour and fixed our burst pipe. Very professional and clean work.', author:'Mohammed R., Deira', visible:true },
+    { stars:5, text:'Called them at midnight for an A/C breakdown. They showed up fast, repaired it on the spot. Highly recommend!', author:'Sarah K., Jumeirah', visible:true },
+    { stars:4, text:'Great tiling job in our bathroom. Very fair price, neat work. Will definitely call again for other maintenance.', author:'Vikram P., Business Bay', visible:true }
+  ];
+
+  function getReviews() {
+    return JSON.parse(localStorage.getItem('df_reviews') || JSON.stringify(defaultReviews));
+  }
+  function saveReviews(r) { localStorage.setItem('df_reviews', JSON.stringify(r)); }
+
+  function renderReviewsEditor() {
+    const reviews = getReviews();
+    document.getElementById('reviewsEditor').innerHTML = reviews.map((r,i) => `
+      <div style="background:#0f1e35; border:1px solid rgba(232,160,32,0.15); border-radius:12px; padding:1.4rem; display:flex; gap:1.2rem; align-items:flex-start;">
+        <div style="flex:1;">
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem;">
+            <label style="color:#8a95a3; font-size:0.72rem; text-transform:uppercase; letter-spacing:1px;">Stars</label>
+            <select onchange="updateReview(${i},'stars',parseInt(this.value))" style="background:#0a1628; border:1px solid rgba(255,255,255,0.12); color:#e8a020; padding:0.3rem 0.6rem; border-radius:4px; font-family:'Barlow',sans-serif;">
+              ${[5,4,3,2,1].map(n=>`<option value="${n}" ${r.stars===n?'selected':''}>${'★'.repeat(n)}</option>`).join('')}
+            </select>
+            <label style="display:flex; align-items:center; gap:0.4rem; color:#8a95a3; font-size:0.8rem; margin-left:auto; cursor:pointer;">
+              <input type="checkbox" ${r.visible?'checked':''} onchange="updateReview(${i},'visible',this.checked)"> Visible on site
+            </label>
+          </div>
+          <textarea class="admin-input admin-textarea" oninput="updateReview(${i},'text',this.value)">${r.text}</textarea>
+          <input class="admin-input" placeholder="Reviewer name & area" value="${r.author}" oninput="updateReview(${i},'author',this.value)">
+        </div>
+        <button onclick="deleteReview(${i})" style="background:rgba(231,76,60,0.12); color:#e74c3c; border:1px solid rgba(231,76,60,0.25); padding:0.5rem 0.7rem; border-radius:6px; cursor:pointer; font-size:1rem; flex-shrink:0;">🗑</button>
+      </div>`).join('');
+  }
+
+  function updateReview(idx, field, val) {
+    const reviews = getReviews();
+    reviews[idx][field] = val;
+    saveReviews(reviews);
+  }
+  function deleteReview(idx) {
+    if (!confirm('Delete this review?')) return;
+    const reviews = getReviews();
+    reviews.splice(idx,1);
+    saveReviews(reviews);
+    renderReviewsEditor();
+  }
+  function addReview() {
+    const reviews = getReviews();
+    reviews.push({ stars:5, text:'Enter review text here.', author:'Customer Name, Dubai', visible:true });
+    saveReviews(reviews);
+    renderReviewsEditor();
+  }
+
+  // Scroll reveal
+  const obs2 = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card, .why-item, .review-card, .gallery-item, .faq-item').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(24px)';
+    el.style.transition='opacity 0.5s ease, transform 0.5s ease';
+    obs2.observe(el);
+  });
+</script>
+</body>
+</html>
